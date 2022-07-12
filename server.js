@@ -20,9 +20,8 @@ useFindAndModify: false,
     console.log(error.message)
 })
 
+const PORT = process.env.PORT
 
-const port = 5000;
-
-app.listen (port,() =>{
-    console.log (`Server started on port ${port}...`);
+app.listen (PORT,() =>{
+    console.log (`Server started on port ${PORT}...`);
 })
