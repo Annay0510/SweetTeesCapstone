@@ -7,4 +7,10 @@ productsRouter
 .get(productController.getProducts)
 .post(productController.createProducts);
 
+productsRouter
+  .route("/:id")
+  .get(productController.getOneProduct)
+  .delete(productController.deleteProduct)
+  .put(productController.updateProduct);
+
 module.exports = productsRouter;
