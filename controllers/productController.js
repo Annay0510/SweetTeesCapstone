@@ -5,34 +5,31 @@ exports.getProducts = async (req,res) =>{
       const products = await Products.find();
       res.status(200).json({
           status: "success",
-          results: products.length,
           data: {
-              products,
+              products:products
           },
       });
   }  catch(error){
       res.status(500).json({
           status: "error",
-          data: {
-              error: error.message,
-          },
+          message: error,
       });
   }
 };
 
 exports.createProducts = async (req,res) => {
 try {
-    const newProduct = await Products.create(request.body);
+    const newProduct = await Products.create(req.body);
     res.status(201).json({
         status: "success",
         data: {
-            newProduct,
-        },
+            newProduct:newProduct,
+        }
     });
-}catch{
+}catch(error){
     res.status(500).json({
     status:"error",
-    error: error.message
+    message: error,
 })
 }
 };

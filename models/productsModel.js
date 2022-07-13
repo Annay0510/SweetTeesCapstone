@@ -7,7 +7,9 @@ const productsSchema = new mongoose.Schema({
     description: {
         type: String,
     },
-    price: Number,
+    price: {
+        type: Number,
+    },
 });
 
 const Products = mongoose.model("Products", productsSchema);
