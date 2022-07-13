@@ -7,11 +7,11 @@ app.use(express.urlencoded({
 })
 );
 
-app.use(express.json())
+app.use(express.json());
 
 app.use(express.static("public"));
 
-app.use ("/products", productsRouter)
+app.use ("/products", productsRouter);
 //const port = 5000
 //app.listen (port,() =>{
 //    console.log (`Server started on port ${port}...`);
