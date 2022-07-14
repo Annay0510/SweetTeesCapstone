@@ -13,6 +13,11 @@ const Gallery = () => {
         console.log(product);
     }, []);
 
+    const deleteProduct = (id) => {
+        axios.delete(`http://localhost:3005/products/${id}`)
+        .then (window.location = "/");
+    }
+
     const listOfProducts = product.map ((element) => {
         return (
             <div>
@@ -20,6 +25,7 @@ const Gallery = () => {
                 <h2>{element.name}</h2>
                 <p>price: ${element.price}</p>
                 <p>description: {element.description}</p>
+                <button onClick={()=>deleteProduct(element._id)}>Delete</button>
             </div>
         )
     })
@@ -29,8 +35,8 @@ const Gallery = () => {
                <div>{listOfProducts}</div> 
 
             </div>
-        )
-    }  
+        );
+    };  
 
 
 

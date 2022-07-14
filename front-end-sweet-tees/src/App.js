@@ -2,6 +2,7 @@
 import Welcome from "./components/Welcome";
 import Gallery from "./components/Gallery";
 import ProductAdd from "./components/AddNewProduct";
+import ProductEdit from "./components/EditProduct";
 
 
 function App() {
@@ -10,7 +11,6 @@ function App() {
      <Welcome/>
      <Gallery/>
      <ProductAdd/>
-
     </div>
   );
 }
