@@ -1,6 +1,7 @@
 
 import Welcome from "./components/Welcome";
 import Gallery from "./components/Gallery";
+import ProductAdd from "./components/AddNewProduct";
 
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
     <div>
      <Welcome/>
      <Gallery/>
+     <ProductAdd/>
+
     </div>
   );
 }
