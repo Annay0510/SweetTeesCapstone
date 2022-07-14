@@ -17,9 +17,9 @@ const Gallery = () => {
         return (
             <div>
                 <img src = {element.image} alt= {element.description}></img>
-                {/* <h2>{element.name}</h2> */}
+                <h2>{element.name}</h2>
                 <p>price: ${element.price}</p>
-                <p>description: ${element.description}</p>
+                <p>description: {element.description}</p>
             </div>
         )
     })
